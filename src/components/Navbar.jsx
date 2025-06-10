@@ -39,13 +39,19 @@ const Navbar = ({ isMobileMenuOpen, toggleMobileMenu, isNavbarSolid }) => {
     <nav className={navClass} id="navbar">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo Section avec animation */}
-          <div className="flex-shrink-0 transform transition-transform duration-300 hover:scale-105">
+          {/* Logo Section avec animation et nom de l'entreprise */}
+          <div className="flex items-center space-x-3 transform transition-transform duration-300 hover:scale-105">
             <img 
               src={logoPath} 
-              alt="Movmed Logo" 
-              className="h-12 w-auto filter drop-shadow-lg" 
+              alt="Movmed Trans Logo" 
+              className="h-16 w-auto filter drop-shadow-lg" 
             />
+            <div className="flex flex-col">
+              <h1 className="text-white font-bold text-xl tracking-wide">
+                Movmed Trans
+              </h1>
+              
+            </div>
           </div>
 
           {/* Desktop Navigation Links */}
