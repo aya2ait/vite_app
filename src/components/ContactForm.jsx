@@ -18,15 +18,27 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend server
-    console.log('Form data submitted:', formData);
-    alert('Merci pour votre demande ! Nous vous contacterons bientôt.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-    });
+
+    fetch("https://formsubmit.co/ayaaitsakrim@gmail.com", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(response => {
+        if (response.ok) {
+          alert("Merci pour votre demande ! Nous vous contacterons bientôt.");
+          setFormData({ name: '', email: '', phone: '', message: '' });
+        } else {
+          alert("Une erreur est survenue. Veuillez réessayer.");
+        }
+      })
+      .catch(error => {
+        console.error("Erreur :", error);
+        alert("Erreur réseau. Veuillez réessayer.");
+      });
   };
 
   return (

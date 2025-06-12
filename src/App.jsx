@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import StatsSection from './components/StatsSection';
-import ServicesSection from './components/ServicesSection';
-import AboutSection from './components/AboutSection';
-import ContactForm from './components/ContactForm';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Composants existants
+import Navbar from './components/Navbar.jsx';
+import HeroSection from './components/HeroSection.jsx';
+import StatsSection from './components/StatsSection.jsx';
+import ServicesSection from './components/ServicesSection.jsx';
+import AboutSection from './components/AboutSection.jsx';
+import PartnersSection from './components/PartnersSection.jsx';
+import ContactForm from './components/ContactForm.jsx';
+import Footer from './components/Footer.jsx';
+
+// Nouveaux composants
+import AboutPage from './components/AboutPage.jsx';
+import ProcessPage from './components/ProcessPage.jsx';
+import ServicesPage from './components/ServicesPage.jsx'; // Nouvelle page
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -30,20 +39,37 @@ function App() {
     };
   }, []);
 
-  return (
+  // Composant pour la page d'accueil (votre landing page actuelle)
+  const HomePage = () => (
     <div className="bg-gray-light text-text-dark">
-      <Navbar
-        isMobileMenuOpen={isMobileMenuOpen}
-        toggleMobileMenu={toggleMobileMenu}
-        isNavbarSolid={isNavbarSolid}
-      />
       <HeroSection />
       <StatsSection />
       <ServicesSection />
       <AboutSection />
+      <PartnersSection />
       <ContactForm />
-      <Footer />
     </div>
+  );
+
+  return (
+    <Router>
+      <div className="bg-gray-light text-text-dark">
+        <Navbar
+          isMobileMenuOpen={isMobileMenuOpen}
+          toggleMobileMenu={toggleMobileMenu}
+          isNavbarSolid={isNavbarSolid}
+        />
+        
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/process" element={<ProcessPage />} />
+        </Routes>
+        
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
