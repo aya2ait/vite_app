@@ -67,7 +67,6 @@ const Navbar = ({ isMobileMenuOpen, toggleMobileMenu, isNavbarSolid }) => {
               {isHomePage ? (
                 <>
                   <NavLink href="#accueil" onClick={handleNavClick}>Accueil</NavLink>
-                  <NavLink href="#services" onClick={handleNavClick}>Services</NavLink>
                   <RouteNavLink to="/services">Tous nos Services</RouteNavLink>
                   <RouteNavLink to="/about">À propos</RouteNavLink>
                   <RouteNavLink to="/process">Notre Processus</RouteNavLink>
