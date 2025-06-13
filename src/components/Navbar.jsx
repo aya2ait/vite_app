@@ -6,10 +6,11 @@ const Navbar = ({ isMobileMenuOpen, toggleMobileMenu, isNavbarSolid }) => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
-  const navClass = `fixed top-0 w-full z-50 transition-all duration-500 ${
-  isNavbarSolid 
-    ? 'bg-[linear-gradient(to_right,_#2e2e2e,_#1c1c1c,_#000000)] backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
-    : 'bg-[#404041]/90 backdrop-blur-2xl'
+  // Navbar complètement transparent au début, puis se fonce
+  const navClass = `fixed top-0 w-full z-50 transition-all duration-800 ${
+    isNavbarSolid 
+      ? 'bg-[linear-gradient(to_right,_#2e2e2e,_#1c1c1c,_#000000)] backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
+      : 'bg-transparent backdrop-blur-none' // Complètement transparent au début
   }`;
 
   // Fonction pour le smooth scroll (seulement sur la page d'accueil)
@@ -55,7 +56,9 @@ const Navbar = ({ isMobileMenuOpen, toggleMobileMenu, isNavbarSolid }) => {
               className="h-16 w-auto filter drop-shadow-lg" 
             />
             <div className="flex flex-col">
-              <h1 className="text-white font-bold text-xl tracking-wide">
+              <h1 className={`font-bold text-xl tracking-wide transition-colors duration-500 ${
+                isNavbarSolid ? 'text-white' : 'text-white drop-shadow-lg'
+              }`}>
                 Movmed Trans
               </h1>
             </div>
@@ -66,20 +69,17 @@ const Navbar = ({ isMobileMenuOpen, toggleMobileMenu, isNavbarSolid }) => {
             <div className="flex space-x-10">
               {isHomePage ? (
                 <>
-                  <NavLink href="#accueil" onClick={handleNavClick}>Accueil</NavLink>
-                  <RouteNavLink to="/services">Tous nos Services</RouteNavLink>
-                  <RouteNavLink to="/about">À propos</RouteNavLink>
-                  <RouteNavLink to="/process">Notre Processus</RouteNavLink>
+                  <NavLink href="#accueil" onClick={handleNavClick} isNavbarSolid={isNavbarSolid}>Accueil</NavLink>
+                  <RouteNavLink to="/services" isNavbarSolid={isNavbarSolid}>Services</RouteNavLink>
+                  <RouteNavLink to="/about" isNavbarSolid={isNavbarSolid}>À propos</RouteNavLink>
                   <ContactButton href="#contact" onClick={handleNavClick}>Contact</ContactButton>
                 </>
               ) : (
                 <>
-                  <RouteNavLink to="/">Accueil</RouteNavLink>
-                  <RouteNavLink to="/" onClick={() => window.location.href = '/#services'}>Services</RouteNavLink>
-                  <RouteNavLink to="/services" isActive={location.pathname === '/services'}>Tous nos Services</RouteNavLink>
-                  <RouteNavLink to="/about" isActive={location.pathname === '/about'}>À propos</RouteNavLink>
-                  <RouteNavLink to="/process" isActive={location.pathname === '/process'}>Notre Processus</RouteNavLink>
-                  <RouteNavLink to="/" onClick={() => window.location.href = '/#contact'}>Contact</RouteNavLink>
+                  <RouteNavLink to="/" isNavbarSolid={isNavbarSolid}>Accueil</RouteNavLink>
+                  <RouteNavLink to="/services" isActive={location.pathname === '/services'} isNavbarSolid={isNavbarSolid}>Services</RouteNavLink>
+                  <RouteNavLink to="/about" isActive={location.pathname === '/about'} isNavbarSolid={isNavbarSolid}>À propos</RouteNavLink>
+                  <RouteNavLink to="/" onClick={() => window.location.href = '/#contact'} isNavbarSolid={isNavbarSolid}>Contact</RouteNavLink>
                 </>
               )}
             </div>
@@ -89,7 +89,9 @@ const Navbar = ({ isMobileMenuOpen, toggleMobileMenu, isNavbarSolid }) => {
           <div className="md:hidden">
             <button 
               id="mobile-menu-button" 
-              className="relative w-10 h-10 text-white hover:text-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg transition-all duration-300 hover:bg-white/10"
+              className={`relative w-10 h-10 hover:text-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg transition-all duration-300 hover:bg-white/10 ${
+                isNavbarSolid ? 'text-white' : 'text-white drop-shadow-lg'
+              }`}
               onClick={toggleMobileMenu}
             >
               <div className="absolute inset-0 flex items-center justify-center">
@@ -112,7 +114,7 @@ const Navbar = ({ isMobileMenuOpen, toggleMobileMenu, isNavbarSolid }) => {
         </div>
       </div>
 
-      {/* Mobile Menu avec animation slide */}
+      {/* Mobile Menu avec animation slide - toujours avec fond sombre pour la lisibilité */}
       <div 
         id="mobile-menu" 
         className={`md:hidden overflow-hidden transition-all duration-500 ease-out ${
@@ -125,19 +127,15 @@ const Navbar = ({ isMobileMenuOpen, toggleMobileMenu, isNavbarSolid }) => {
           {isHomePage ? (
             <>
               <MobileNavLink href="#accueil" onClick={handleNavClick}>Accueil</MobileNavLink>
-              <MobileNavLink href="#services" onClick={handleNavClick}>Services</MobileNavLink>
-              <MobileRouteNavLink to="/services" onClick={() => toggleMobileMenu()}>Tous nos Services</MobileRouteNavLink>
+              <MobileRouteNavLink to="/services" onClick={() => toggleMobileMenu()}>Services</MobileRouteNavLink>
               <MobileRouteNavLink to="/about" onClick={() => toggleMobileMenu()}>À propos</MobileRouteNavLink>
-              <MobileRouteNavLink to="/process" onClick={() => toggleMobileMenu()}>Notre Processus</MobileRouteNavLink>
               <MobileContactButton href="#contact" onClick={handleNavClick}>Contact</MobileContactButton>
             </>
           ) : (
             <>
               <MobileRouteNavLink to="/" onClick={() => toggleMobileMenu()}>Accueil</MobileRouteNavLink>
-              <MobileRouteNavLink to="/" onClick={() => { toggleMobileMenu(); window.location.href = '/#services'; }}>Services</MobileRouteNavLink>
-              <MobileRouteNavLink to="/services" onClick={() => toggleMobileMenu()} isActive={location.pathname === '/services'}>Tous nos Services</MobileRouteNavLink>
+              <MobileRouteNavLink to="/services" onClick={() => toggleMobileMenu()} isActive={location.pathname === '/services'}>Services</MobileRouteNavLink>
               <MobileRouteNavLink to="/about" onClick={() => toggleMobileMenu()} isActive={location.pathname === '/about'}>À propos</MobileRouteNavLink>
-              <MobileRouteNavLink to="/process" onClick={() => toggleMobileMenu()} isActive={location.pathname === '/process'}>Notre Processus</MobileRouteNavLink>
               <MobileRouteNavLink to="/" onClick={() => { toggleMobileMenu(); window.location.href = '/#contact'; }}>Contact</MobileRouteNavLink>
             </>
           )}
@@ -148,11 +146,13 @@ const Navbar = ({ isMobileMenuOpen, toggleMobileMenu, isNavbarSolid }) => {
 };
 
 // NavLink pour les liens internes (avec smooth scroll)
-const NavLink = ({ href, children, onClick }) => (
+const NavLink = ({ href, children, onClick, isNavbarSolid }) => (
   <a 
     href={href} 
     onClick={(e) => onClick(e, href)}
-    className="relative px-4 py-2 text-gray-100 font-medium text-sm tracking-wide hover:text-white transition-all duration-300 group cursor-pointer"
+    className={`relative px-4 py-2 font-medium text-sm tracking-wide hover:text-white transition-all duration-300 group cursor-pointer ${
+      isNavbarSolid ? 'text-gray-100' : 'text-white drop-shadow-lg'
+    }`}
   >
     {children}
     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 transition-all duration-300 group-hover:w-full"></span>
@@ -161,14 +161,16 @@ const NavLink = ({ href, children, onClick }) => (
 );
 
 // RouteNavLink pour les liens entre pages
-const RouteNavLink = ({ to, children, isActive, onClick }) => (
+const RouteNavLink = ({ to, children, isActive, onClick, isNavbarSolid }) => (
   <Link 
     to={to}
     onClick={onClick}
     className={`relative px-4 py-2 font-medium text-sm tracking-wide transition-all duration-300 group cursor-pointer ${
       isActive 
         ? 'text-orange-400' 
-        : 'text-gray-100 hover:text-white'
+        : isNavbarSolid 
+          ? 'text-gray-100 hover:text-white'
+          : 'text-white drop-shadow-lg hover:text-white'
     }`}
   >
     {children}

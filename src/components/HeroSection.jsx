@@ -31,9 +31,9 @@ const HeroSection = () => {
 
       {/* Contenu principal */}
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-        <div className="backdrop-blur-sm bg-white/10 rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+        <div className="backdrop-blur-sm bg-gray-500/20 rounded-3xl p-8 md:p-12 border border-gray-300/30 shadow-2xl">
           <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
-            <span className="block bg-gradient-to-r from-[#2e2e2e] via-[#1c1c1c] to-[#000000] bg-clip-text text-transparent drop-shadow-lg">
+            <span className="block text-white drop-shadow-lg">
               Votre partenaire
             </span>
             <span className="block bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 bg-clip-text text-transparent">
@@ -41,8 +41,8 @@ const HeroSection = () => {
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-10 text-gray-800 font-medium leading-relaxed max-w-3xl mx-auto drop-shadow-sm">
-            Solutions logistiques <span className="text-orange-600 font-bold">modernes</span> et <span className="text-orange-600 font-bold">innovantes</span> pour vos marchandises au Maroc et à l'international
+          <p className="text-xl md:text-2xl mb-10 text-white font-medium leading-relaxed max-w-3xl mx-auto drop-shadow-sm">
+            Solutions logistiques <span className="text-orange-400 font-bold">modernes</span> et <span className="text-orange-400 font-bold">innovantes</span> pour vos marchandises au Maroc et à l'international
           </p>
           
           <div className="flex justify-center">
