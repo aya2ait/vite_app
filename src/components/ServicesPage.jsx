@@ -164,10 +164,7 @@ const ServicesPage = () => {
                   </div>
 
                   <div className="pt-8 border-t border-slate-100">
-                    <button className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition-colors group/btn text-lg">
-                      En savoir plus
-                      <ArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                    </button>
+                    
                   </div>
                 </div>
               </div>
