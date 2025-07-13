@@ -26,6 +26,7 @@ const ContactComponent = () => {
 
           {/* Description */}
           <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mb-8">
+            Vous avez un projet de transport ou souhaitez obtenir un devis personnalisé ?
             Notre équipe est à votre écoute pour répondre à vos questions et vous accompagner dans vos besoins logistiques.
           </p>
 
