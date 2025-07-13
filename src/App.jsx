@@ -48,8 +48,9 @@ function App() {
       <ServicesSection />
       <AboutSection />
       <PartnersSection />
-      <ContactForm />
       <ContactComponent />
+      <ContactForm />
+      
 
     </div>
   );
