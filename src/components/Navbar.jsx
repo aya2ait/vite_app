@@ -70,16 +70,14 @@ const Navbar = ({ isMobileMenuOpen, toggleMobileMenu, isNavbarSolid }) => {
               {isHomePage ? (
                 <>
                   <NavLink href="#accueil" onClick={handleNavClick} isNavbarSolid={isNavbarSolid}>Accueil</NavLink>
-                  <RouteNavLink to="/services" isNavbarSolid={isNavbarSolid}>Services</RouteNavLink>
-                  <RouteNavLink to="/about" isNavbarSolid={isNavbarSolid}>À propos</RouteNavLink>
-                  <ContactButton href="#contact" onClick={handleNavClick}>Contact</ContactButton>
+                  <RouteNavLink to="/services" isNavbarSolid={isNavbarSolid}>Qui sommes-nous ?</RouteNavLink>
+                  <ContactButton href="#contactus" onClick={handleNavClick}>Contactez nous</ContactButton>
                 </>
               ) : (
                 <>
                   <RouteNavLink to="/" isNavbarSolid={isNavbarSolid}>Accueil</RouteNavLink>
-                  <RouteNavLink to="/services" isActive={location.pathname === '/services'} isNavbarSolid={isNavbarSolid}>Services</RouteNavLink>
-                  <RouteNavLink to="/about" isActive={location.pathname === '/about'} isNavbarSolid={isNavbarSolid}>À propos</RouteNavLink>
-                  <RouteNavLink to="/" onClick={() => window.location.href = '/#contact'} isNavbarSolid={isNavbarSolid}>Contact</RouteNavLink>
+                  <RouteNavLink to="/services" isActive={location.pathname === '/services'} isNavbarSolid={isNavbarSolid}>Qui sommes-nous ?</RouteNavLink>
+                  <RouteNavLink to="/" onClick={() => window.location.href = '/#contactus'} isNavbarSolid={isNavbarSolid}>Contactez nous</RouteNavLink>
                 </>
               )}
             </div>
@@ -127,16 +125,14 @@ const Navbar = ({ isMobileMenuOpen, toggleMobileMenu, isNavbarSolid }) => {
           {isHomePage ? (
             <>
               <MobileNavLink href="#accueil" onClick={handleNavClick}>Accueil</MobileNavLink>
-              <MobileRouteNavLink to="/services" onClick={() => toggleMobileMenu()}>Services</MobileRouteNavLink>
-              <MobileRouteNavLink to="/about" onClick={() => toggleMobileMenu()}>À propos</MobileRouteNavLink>
-              <MobileContactButton href="#contact" onClick={handleNavClick}>Contact</MobileContactButton>
+              <MobileRouteNavLink to="/services" onClick={() => toggleMobileMenu()}>Qui sommes-nous ?</MobileRouteNavLink>
+              <MobileContactButton href="#contactus" onClick={handleNavClick}>Contactez nous</MobileContactButton>
             </>
           ) : (
             <>
               <MobileRouteNavLink to="/" onClick={() => toggleMobileMenu()}>Accueil</MobileRouteNavLink>
-              <MobileRouteNavLink to="/services" onClick={() => toggleMobileMenu()} isActive={location.pathname === '/services'}>Services</MobileRouteNavLink>
-              <MobileRouteNavLink to="/about" onClick={() => toggleMobileMenu()} isActive={location.pathname === '/about'}>À propos</MobileRouteNavLink>
-              <MobileRouteNavLink to="/" onClick={() => { toggleMobileMenu(); window.location.href = '/#contact'; }}>Contact</MobileRouteNavLink>
+              <MobileRouteNavLink to="/services" onClick={() => toggleMobileMenu()} isActive={location.pathname === '/services'}>Qui sommes-nous ?</MobileRouteNavLink>
+              <MobileRouteNavLink to="/" onClick={() => { toggleMobileMenu(); window.location.href = '/#contactus'; }}>Contactez nous</MobileRouteNavLink>
             </>
           )}
         </div>

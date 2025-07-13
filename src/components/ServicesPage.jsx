@@ -1,280 +1,221 @@
 import React from 'react';
-import { Truck, Clock, Thermometer, Package, Map, Shield, ArrowRight, CheckCircle, Star } from 'lucide-react';
+import { Truck, Target, Eye, Award, Users, Globe, Shield } from 'lucide-react';
 
 const ServicesPage = () => {
-  const services = [
-    {
-      icon: <Truck className="w-12 h-12 text-orange-600" />,
-      title: "Transport National et International",
-      description: "Nous offrons des services de transport pour vos marchandises, que ce soit à l'échelle nationale ou internationale.",
-      features: [
-        "Acheminement sécurisé et efficace à travers tout le Maroc et dans le monde entier",
-        "Solutions adaptées à chaque type de marchandise",
-        "Suivi en temps réel grâce à notre système de tracking moderne",
-        "Garantie de sécurité optimale tout au long du trajet"
-      ],
-      color: "from-blue-50 to-blue-100",
-      iconBg: "bg-blue-50"
-    },
-    {
-      icon: <Package className="w-12 h-12 text-orange-600" />,
-      title: "Service Porte-à-Porte",
-      description: "Un service complet et pratique pour tous vos besoins de transport.",
-      features: [
-        "Ramassage et livraison directe sans étapes intermédiaires",
-        "Prise en charge intégrale du processus logistique",
-        "Réduction des contraintes logistiques",
-        "Solution clé en main pour vous concentrer sur votre métier"
-      ],
-      color: "from-green-50 to-green-100",
-      iconBg: "bg-green-50"
-    },
-    {
-      icon: <Clock className="w-12 h-12 text-orange-600" />,
-      title: "Livraison Express",
-      description: "Pour vos besoins urgents, nous mettons à votre disposition des solutions de livraison rapide.",
-      features: [
-        "Respect des délais serrés et contraignants",
-        "Solutions express fiables et sécurisées",
-        "Continuité de vos opérations sans interruption",
-        "Service d'urgence disponible 24h/7j"
-      ],
-      color: "from-red-50 to-red-100",
-      iconBg: "bg-red-50"
-    },
-    {
-      icon: <Thermometer className="w-12 h-12 text-orange-600" />,
-      title: "Transport Frigorifique",
-      description: "Solutions adaptées pour le transport de marchandises sensibles, notamment les produits frais.",
-      features: [
-        "Respect strict de la chaîne du froid",
-        "Véhicules équipés d'installations de pointe",
-        "Sécurité optimale des produits périssables",
-        "Contrôle de température en temps réel"
-      ],
-      color: "from-cyan-50 to-cyan-100",
-      iconBg: "bg-cyan-50"
-    },
-    {
-      icon: <Map className="w-12 h-12 text-orange-600" />,
-      title: "Gestion Logistique Intégrée",
-      description: "Solutions complètes intégrant l'ensemble de la chaîne logistique, de la gestion des stocks à la distribution finale.",
-      features: [
-        "Optimisation de vos processus logistiques",
-        "Réduction des coûts et amélioration des délais",
-        "Stockage et gestion rigoureuse des stocks",
-        "Outils de gestion modernes et efficaces"
-      ],
-      color: "from-purple-50 to-purple-100",
-      iconBg: "bg-purple-50"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-20">
-            <div className="w-full h-full" style={{
-              backgroundImage: 'radial-gradient(circle at 20px 20px, rgba(249, 115, 22, 0.3) 1px, transparent 1px)',
-              backgroundSize: '40px 40px'
-            }}></div>
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-transparent"></div>
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center bg-orange-500/20 backdrop-blur-sm border border-orange-400/30 rounded-full px-6 py-3 mb-8 shadow-lg">
-            <Shield className="w-5 h-5 text-orange-400 mr-2" />
-            <span className="text-orange-300 font-semibold text-sm tracking-wide uppercase">Services Professionnels</span>
-          </div>
-
-          <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">Services</span>
-          </h1>
-
-          <p className="text-xl lg:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light">
-            Chez Movmed Trans, nous vous proposons une gamme complète de services logistiques
-            adaptés à vos besoins spécifiques, que ce soit pour le transport national ou international.
-          </p>
-
-          <div className="mt-16 flex flex-wrap justify-center gap-8">
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-slate-800/70">
-              <div className="text-3xl font-bold text-orange-400 mb-1">5+</div>
-              <div className="text-slate-300 font-medium">Services Spécialisés</div>
+      <div className="relative bg-gradient-to-r from-slate-900 via-orange-900 to-slate-900 text-white py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center bg-orange-600/20 px-4 py-2 rounded-full text-orange-300 text-sm font-medium mb-6">
+                <Truck className="w-4 h-4 mr-2" />
+                Transport International
+              </div>
+              <h1 className="text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+                MOUVMED
+                <span className="block text-orange-400">TRANS</span>
+              </h1>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                Votre partenaire de confiance pour le transport routier de marchandises 
+                entre le Maroc et l'Europe
+              </p>
             </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-slate-800/70">
-              <div className="text-3xl font-bold text-orange-400 mb-1">24/7</div>
-              <div className="text-slate-300 font-medium">Support Client</div>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-slate-800/70">
-              <div className="text-3xl font-bold text-orange-400 mb-1">100%</div>
-              <div className="text-slate-300 font-medium">Satisfaction</div>
+            <div className="relative">
+              <div className="bg-gradient-to-br from-orange-600/20 to-slate-700/20 rounded-2xl p-6 backdrop-blur-sm border border-orange-600/30">
+                <div className="bg-gray-700/50 rounded-xl h-80 flex items-center justify-center">
+                  <div className="text-center">
+                    <Truck className="w-16 h-16 text-orange-400 mx-auto mb-4" />
+                    <p className="text-gray-300 text-sm">Photo de la flotte de camions</p>
+                    <p className="text-gray-400 text-xs mt-2">Véhicules modernes et équipés</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Services Grid */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center bg-slate-100 rounded-full px-4 py-2 mb-6">
-              <Star className="w-4 h-4 text-orange-600 mr-2" />
-              <span className="text-slate-700 font-medium text-sm">Excellence Logistique</span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Solutions Logistiques Complètes
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Nous nous engageons à offrir des solutions sur mesure pour simplifier et optimiser
-              la gestion de vos expéditions, tout en garantissant sécurité, ponctualité et qualité.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="group bg-white border border-slate-200 rounded-2xl hover:border-orange-200 hover:shadow-xl transition-all duration-500 overflow-hidden transform hover:-translate-y-1"
-              >
-                <div className="p-10">
-                  <div className="flex items-start space-x-8">
-                    <div className={`p-5 rounded-2xl ${service.iconBg} border border-slate-100 group-hover:scale-110 transition-transform duration-300 shadow-sm`}>
-                      {service.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-orange-600 transition-colors leading-tight">
-                        {service.title}
-                      </h3>
-                      <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-                        {service.description}
-                      </p>
+      {/* About Section */}
+      <div className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="relative">
+                <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 shadow-2xl">
+                  <div className="bg-gray-200 rounded-xl h-64 mb-6 flex items-center justify-center">
+                    <div className="text-center">
+                      <Users className="w-12 h-12 text-gray-500 mx-auto mb-2" />
+                      <p className="text-gray-600 text-sm">Photo de l'équipe</p>
+                      <p className="text-gray-500 text-xs mt-1">Professionnels expérimentés</p>
                     </div>
                   </div>
-
-                  <div className="space-y-5 mb-8">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-start space-x-4">
-                        <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                        <span className="text-slate-700 leading-relaxed">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="pt-8 border-t border-slate-100">
-                    
+                  <div className="bg-gray-200 rounded-xl h-48 flex items-center justify-center">
+                    <div className="text-center">
+                      <Globe className="w-12 h-12 text-gray-500 mx-auto mb-2" />
+                      <p className="text-gray-600 text-sm">Carte des destinations</p>
+                      <p className="text-gray-500 text-xs mt-1">Maroc - Europe</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Quality Assurance Section */}
-      <section className="py-24 bg-slate-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 opacity-60"></div>
-        
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center bg-slate-200 border border-slate-300 rounded-full px-6 py-3 mb-6 shadow-sm">
-              <Shield className="w-4 h-4 text-orange-600 mr-2" />
-              <span className="text-slate-700 font-medium">Engagement Qualité</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Notre Engagement Qualité
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Chez Movmed Trans, nous sommes déterminés à offrir des solutions de transport et de logistique
-              adaptées à vos besoins spécifiques.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="text-center group">
-              <div className="relative">
-                <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <Shield className="w-12 h-12 text-white" />
+            
+            <div className="order-1 lg:order-2">
+              <div className="flex items-center mb-8">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-4 rounded-xl mr-6 shadow-lg">
+                  <Truck className="w-8 h-8 text-white" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                  <CheckCircle className="w-4 h-4 text-white" />
+                <div>
+                  <h2 className="text-4xl font-bold text-gray-900 mb-2">Qui sommes-nous ?</h2>
+                  <div className="w-24 h-1 bg-orange-500 rounded-full"></div>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Qualité</h3>
-              <p className="text-slate-600 leading-relaxed text-lg">
-                Standards de qualité élevés pour chaque service et prestation
-              </p>
-            </div>
-
-            <div className="text-center group">
-              <div className="relative">
-                <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <Clock className="w-12 h-12 text-white" />
-                </div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                  <CheckCircle className="w-4 h-4 text-white" />
+              
+              <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+                <p>
+                  MOUVMED TRANS est une société marocaine spécialisée dans le transport routier de marchandises, 
+                  avec une expertise solide tant au niveau national qu'international, notamment vers l'Europe.
+                </p>
+                <p>
+                  Depuis sa création, notre entreprise s'est engagée à fournir des solutions logistiques fiables, 
+                  flexibles et adaptées aux besoins spécifiques de chaque client.
+                </p>
+                <p>
+                  Notre équipe expérimentée, nos véhicules modernes et notre réseau étendu nous permettent d'assurer 
+                  un service de haute qualité, alliant rapidité, sécurité et respect des délais.
+                </p>
+                <p>
+                  Chez MOUVMED TRANS, la satisfaction client est notre priorité absolue, et nous mettons tout en 
+                  œuvre pour bâtir des relations durables basées sur la confiance et le professionnalisme.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl mt-8">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="bg-white p-4 rounded-xl shadow-md mb-4">
+                      <Award className="w-8 h-8 text-orange-600 mx-auto" />
+                    </div>
+                    <h3 className="font-semibold text-gray-900">Excellence</h3>
+                    <p className="text-sm text-gray-600">Service de qualité</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-white p-4 rounded-xl shadow-md mb-4">
+                      <Users className="w-8 h-8 text-orange-600 mx-auto" />
+                    </div>
+                    <h3 className="font-semibold text-gray-900">Équipe</h3>
+                    <p className="text-sm text-gray-600">Professionnels expérimentés</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-white p-4 rounded-xl shadow-md mb-4">
+                      <Globe className="w-8 h-8 text-orange-600 mx-auto" />
+                    </div>
+                    <h3 className="font-semibold text-gray-900">International</h3>
+                    <p className="text-sm text-gray-600">Maroc - Europe</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-white p-4 rounded-xl shadow-md mb-4">
+                      <Truck className="w-8 h-8 text-orange-600 mx-auto" />
+                    </div>
+                    <h3 className="font-semibold text-gray-900">Flotte</h3>
+                    <p className="text-sm text-gray-600">Véhicules modernes</p>
+                  </div>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Ponctualité</h3>
-              <p className="text-slate-600 leading-relaxed text-lg">
-                Respect rigoureux des délais et engagement de ponctualité
-              </p>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div className="text-center group">
-              <div className="relative">
-                <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <Package className="w-12 h-12 text-white" />
+      {/* Mission & Vision Section */}
+      <div className="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Mission */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
+              <div className="flex items-center mb-6">
+                <div className="bg-gradient-to-br from-gray-100 to-gray-200 p-4 rounded-xl mr-4 shadow-lg">
+                  <Target className="w-8 h-8 text-gray-600" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                  <CheckCircle className="w-4 h-4 text-white" />
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900">Mission</h2>
+                  <div className="w-16 h-1 bg-gray-500 rounded-full mt-2"></div>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Sécurité</h3>
-              <p className="text-slate-600 leading-relaxed text-lg">
-                Protection optimale de vos marchandises durant tout le transport
-              </p>
+              
+              <div className="mb-6">
+                <div className="bg-gray-200 rounded-xl h-48 flex items-center justify-center">
+                  <div className="text-center">
+                    <Shield className="w-12 h-12 text-gray-500 mx-auto mb-2" />
+                    <p className="text-gray-600 text-sm">Photo de service sécurisé</p>
+                    <p className="text-gray-500 text-xs mt-1">Sécurité et fiabilité</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p className="font-medium text-gray-800">
+                  Offrir des solutions de transport routier de marchandises sûres, rapides et personnalisées, 
+                  adaptées aux besoins spécifiques de nos clients au Maroc et en Europe.
+                </p>
+                <p>
+                  Nous nous engageons à garantir la fiabilité, la sécurité et la ponctualité de chaque livraison, 
+                  tout en optimisant les coûts et en respectant les normes environnementales.
+                </p>
+                <div className="bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-xl border-l-4 border-orange-500 mt-6">
+                  <p className="text-orange-800 font-medium">
+                    Grâce à une équipe professionnelle et une flotte moderne, nous visons à bâtir des relations 
+                    durables basées sur la confiance, la qualité du service et l'innovation.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Vision */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
+              <div className="flex items-center mb-6">
+                <div className="bg-gradient-to-br from-orange-100 to-orange-200 p-4 rounded-xl mr-4 shadow-lg">
+                  <Eye className="w-8 h-8 text-orange-600" />
+                </div>
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900">Vision</h2>
+                  <div className="w-16 h-1 bg-orange-500 rounded-full mt-2"></div>
+                </div>
+              </div>
+              
+              <div className="mb-6">
+                <div className="bg-gray-200 rounded-xl h-48 flex items-center justify-center">
+                  <div className="text-center">
+                    <Globe className="w-12 h-12 text-gray-500 mx-auto mb-2" />
+                    <p className="text-gray-600 text-sm">Photo du réseau européen</p>
+                    <p className="text-gray-500 text-xs mt-1">Expansion et innovation</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p className="font-medium text-gray-800">
+                  Être reconnu comme le leader fiable et innovant du transport routier de marchandises 
+                  entre le Maroc et l'Europe, en offrant des solutions logistiques performantes, durables et sur mesure.
+                </p>
+                <p>
+                  Développer un réseau solide et moderne qui facilite le commerce international, tout en 
+                  contribuant à la croissance économique locale et régionale.
+                </p>
+                <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl border-l-4 border-gray-500 mt-6">
+                  <p className="text-gray-800 font-medium">
+                    Notre vision repose sur l'excellence opérationnelle, l'innovation technologique et un 
+                    engagement fort envers la satisfaction de nos clients et le respect de l'environnement.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-24 bg-gradient-to-br from-orange-500 to-orange-600 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-10">
-            <div className="w-full h-full" style={{
-              backgroundImage: 'radial-gradient(circle at 30px 30px, rgba(255, 255, 255, 0.4) 2px, transparent 2px)',
-              backgroundSize: '60px 60px'
-            }}></div>
-          </div>
-        </div>
-        
-        <div className="relative max-w-5xl mx-auto text-center px-6 lg:px-8">
-          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-3 mb-8">
-            <ArrowRight className="w-4 h-4 text-white mr-2" />
-            <span className="text-white font-medium">Démarrons Ensemble</span>
-          </div>
-          
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
-            Prêt à Optimiser Votre Logistique ?
-          </h2>
-          <p className="text-xl text-orange-100 mb-12 leading-relaxed max-w-3xl mx-auto">
-            Notre équipe met un point d'honneur à garantir une expérience client irréprochable.
-            Contactez-nous dès aujourd'hui pour discuter de vos besoins spécifiques.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-white text-orange-600 px-10 py-5 rounded-xl font-semibold hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-xl border-2 border-white text-lg">
-              Demander un Devis
-            </button>
-            <button className="border-2 border-white text-white px-10 py-5 rounded-xl font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300 transform hover:scale-105 shadow-xl text-lg">
-              Nous Contacter
-            </button>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };

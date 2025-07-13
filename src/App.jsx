@@ -10,6 +10,7 @@ import AboutSection from './components/AboutSection.jsx';
 import PartnersSection from './components/PartnersSection.jsx';
 import ContactForm from './components/ContactForm.jsx';
 import Footer from './components/Footer.jsx';
+import ContactComponent from './components/ContactComponent.jsx';
 
 // Nouveaux composants
 import AboutPage from './components/AboutPage.jsx';
@@ -48,6 +49,8 @@ function App() {
       <AboutSection />
       <PartnersSection />
       <ContactForm />
+      <ContactComponent />
+
     </div>
   );
 

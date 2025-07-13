@@ -42,7 +42,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl mb-10 text-white font-medium leading-relaxed max-w-3xl mx-auto drop-shadow-sm">
-            Solutions logistiques <span className="text-orange-400 font-bold">modernes</span> et <span className="text-orange-400 font-bold">innovantes</span> pour vos marchandises au Maroc et à l'international
+            MOVMED votre Société de <span className="text-orange-400 font-bold">transport national </span> et <span className="text-orange-400 font-bold">international</span> rapide, fiable, sur mesure
           </p>
           
           <div className="flex justify-center">

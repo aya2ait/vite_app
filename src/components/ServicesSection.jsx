@@ -46,39 +46,35 @@ const ServiceCard = ({ icon, title, description, imageUrl }) => {
 const ServicesSection = () => {
   const services = [
     {
-      icon: '🚛',
+      
       title: 'Transport National & International',
-      description: 'Acheminement sécurisé de vos marchandises partout au Maroc et à l\'international avec suivi en temps réel.',
+      description: 'Transport sécurisé de vos marchandises entre le Maroc et l\'Europe avec des délais optimisés et suivi en temps réel.',
       imageUrl: '/hero1.jpg',
     },
     {
-      icon: '📦',
-      title: 'Service Porte à Porte',
-      description: 'Ramassage et livraison directement à destination finale. Prise en charge complète de vos marchandises.',
+      
+      title: 'Flotte Diversifiée',
+      description: 'Camion tracteur, semi-remorque, camion frigorifique, camion plateau, adaptés à différents types de marchandises.',
       imageUrl: '/hero5.png',
     },
     {
-      icon: '⚡',
-      title: 'Livraison Express',
-      description: 'Solutions de livraison rapide pour vos besoins urgents. Respect des délais serrés garantis.',
+      
+      title: 'Services Personnalisés',
+      description: 'Transport sur devis avec des solutions sur mesure pour répondre à vos exigences spécifiques.',
       imageUrl: '/hero2.webp',
     },
+
+   
     {
-      icon: '🌡️',
-      title: 'Transport Frigorifique',
-      description: 'Transport spécialisé pour produits frais et sensibles. Respect strict de la chaîne du froid.',
-      imageUrl: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    },
-    {
-      icon: '📊',
-      title: 'Gestion Logistique',
-      description: 'Solutions complètes intégrant stockage, gestion des stocks et distribution optimisée.',
+      
+      title: 'Suivi et Gestion',
+      description: 'Une équipe dédiée assure le suivi rigoureux de vos expéditions, garantissant la transparence et la communication en temps réel.',
       imageUrl: 'hero3.png',
     },
     {
-      icon: '📍',
-      title: 'Suivi GPS en Temps Réel',
-      description: 'Technologie de pointe pour suivre vos marchandises en temps réel, avec notifications automatiques.',
+      
+      title: 'Respect des Normes',
+      description: 'Conformité aux réglementations nationales et internationales pour un transport sûr et fiable.',
       imageUrl: 'hero4.png',
     },
   ];
