@@ -37,8 +37,8 @@ const ContactComponent = () => {
                 <Phone className="w-5 h-5 text-orange-600" />
               </div>
               <h3 className="text-sm font-bold text-gray-900 mb-2">Téléphone</h3>
-              <p className="text-gray-600 text-xs">+212 667 19 79 19</p>
-              <p className="text-gray-600 text-xs">+212 539 31 61 67</p>
+              <p className="text-gray-600 text-xs">+212 668 64 71 69</p>
+              <p className="text-gray-600 text-xs">+212 665 31 63 88</p>
             </div>
 
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-md border border-white/30 hover:shadow-lg transition-all duration-300 hover:scale-105">
@@ -46,7 +46,7 @@ const ContactComponent = () => {
                 <Mail className="w-5 h-5 text-orange-600" />
               </div>
               <h3 className="text-sm font-bold text-gray-900 mb-2">Site web</h3>
-              <p className="text-gray-600 text-xs">www.movmedtrans.ma</p>
+              <p className="text-gray-600 text-xs">WWW.MOVMEDTRANS.COM</p>
             </div>
 
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-md border border-white/30 hover:shadow-lg transition-all duration-300 hover:scale-105">

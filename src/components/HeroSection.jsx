@@ -1,15 +1,65 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const HeroSection = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Observer pour détecter quand la section est visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // La section est visible, la vidéo peut jouer
+            video.play().catch(console.error);
+          } else {
+            // La section n'est plus visible, pause la vidéo
+            video.pause();
+          }
+        });
+      },
+      {
+        threshold: 0.1 // La section doit être au moins 10% visible
+      }
+    );
+
+    // Observer la section hero
+    const heroSection = document.getElementById('accueil');
+    if (heroSection) {
+      observer.observe(heroSection);
+    }
+
+    // Nettoyer l'observer au démontage
+    return () => {
+      if (heroSection) {
+        observer.unobserve(heroSection);
+      }
+    };
+  }, []);
+
   return (
     <section id="accueil" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-orange-50">
-      {/* Image de fond avec overlay sophistiqué */}
+      {/* Vidéo de fond avec overlay sophistiqué */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/im5.jpg"
-          alt="Transport moderne"
-          className="w-full h-full object-cover"
-        />
+        <video
+          ref={videoRef}
+          src="/transport-video.mp4"
+          autoPlay
+          loop={false}
+          muted={false}
+          playsInline
+          className="w-full h-full object-cover object-bottom"
+          controls={false}
+        >
+          {/* Fallback pour les navigateurs qui ne supportent pas la vidéo */}
+          <img
+            src="/im5.jpg"
+            alt="Transport moderne"
+            className="w-full h-full object-cover"
+          />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-transparent to-orange-900/30"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
       </div>

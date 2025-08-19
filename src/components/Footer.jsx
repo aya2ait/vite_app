@@ -41,11 +41,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300">
                 <span className="text-orange-400">📧</span>
-                <span>contact@movmedtrans.ma</span>
+                <span>info@MOVMEDTRANS.COM</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300">
                 <span className="text-orange-400">📞</span>
-                <span>+212 667 19 79 19 / +212 539 31 61 67</span>
+                <span>+212 668 64 71 69 / +212 665 31 63 88 </span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300">
                 <span className="text-orange-400">📍</span>
