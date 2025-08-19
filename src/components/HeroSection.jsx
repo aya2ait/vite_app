@@ -6,7 +6,7 @@ const HeroSection = () => {
       {/* Image de fond avec overlay sophistiqué */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero2.webp"
+          src="/im5.jpg"
           alt="Transport moderne"
           className="w-full h-full object-cover"
         />

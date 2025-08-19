@@ -25,13 +25,11 @@ const ServicesPage = () => {
             </div>
             <div className="relative">
               <div className="bg-gradient-to-br from-orange-600/20 to-slate-700/20 rounded-2xl p-6 backdrop-blur-sm border border-orange-600/30">
-                <div className="bg-gray-700/50 rounded-xl h-80 flex items-center justify-center">
-                  <div className="text-center">
-                    <Truck className="w-16 h-16 text-orange-400 mx-auto mb-4" />
-                    <p className="text-gray-300 text-sm">Photo de la flotte de camions</p>
-                    <p className="text-gray-400 text-xs mt-2">Véhicules modernes et équipés</p>
-                  </div>
-                </div>
+                <img 
+                  src="/im13.png"
+                  alt="Flotte de camions MOUVMED TRANS"
+                  className="rounded-xl h-80 w-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -45,20 +43,16 @@ const ServicesPage = () => {
             <div className="order-2 lg:order-1">
               <div className="relative">
                 <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 shadow-2xl">
-                  <div className="bg-gray-200 rounded-xl h-64 mb-6 flex items-center justify-center">
-                    <div className="text-center">
-                      <Users className="w-12 h-12 text-gray-500 mx-auto mb-2" />
-                      <p className="text-gray-600 text-sm">Photo de l'équipe</p>
-                      <p className="text-gray-500 text-xs mt-1">Professionnels expérimentés</p>
-                    </div>
-                  </div>
-                  <div className="bg-gray-200 rounded-xl h-48 flex items-center justify-center">
-                    <div className="text-center">
-                      <Globe className="w-12 h-12 text-gray-500 mx-auto mb-2" />
-                      <p className="text-gray-600 text-sm">Carte des destinations</p>
-                      <p className="text-gray-500 text-xs mt-1">Maroc - Europe</p>
-                    </div>
-                  </div>
+                  <img 
+                    src="/im11copy.jpg"
+                    alt="Équipe professionnelle MOUVMED TRANS"
+                    className="rounded-xl h-64 w-full object-cover mb-6"
+                  />
+                  <img 
+                    src="im3copy.jpg"
+                    alt="Réseau de transport Maroc-Europe"
+                    className="rounded-xl h-48 w-full object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -147,13 +141,11 @@ const ServicesPage = () => {
               </div>
               
               <div className="mb-6">
-                <div className="bg-gray-200 rounded-xl h-48 flex items-center justify-center">
-                  <div className="text-center">
-                    <Shield className="w-12 h-12 text-gray-500 mx-auto mb-2" />
-                    <p className="text-gray-600 text-sm">Photo de service sécurisé</p>
-                    <p className="text-gray-500 text-xs mt-1">Sécurité et fiabilité</p>
-                  </div>
-                </div>
+                <img 
+                  src="im4copy.jpg"
+                  alt="Transport sécurisé et fiable"
+                  className="rounded-xl h-48 w-full object-cover"
+                />
               </div>
               
               <div className="space-y-4 text-gray-700 leading-relaxed">
@@ -187,13 +179,11 @@ const ServicesPage = () => {
               </div>
               
               <div className="mb-6">
-                <div className="bg-gray-200 rounded-xl h-48 flex items-center justify-center">
-                  <div className="text-center">
-                    <Globe className="w-12 h-12 text-gray-500 mx-auto mb-2" />
-                    <p className="text-gray-600 text-sm">Photo du réseau européen</p>
-                    <p className="text-gray-500 text-xs mt-1">Expansion et innovation</p>
-                  </div>
-                </div>
+                <img 
+                  src="im9copy.jpg"
+                  alt="Réseau européen et expansion internationale"
+                  className="rounded-xl h-48 w-full object-cover"
+                />
               </div>
               
               <div className="space-y-4 text-gray-700 leading-relaxed">
